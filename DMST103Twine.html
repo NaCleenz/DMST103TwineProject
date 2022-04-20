@@ -9,13 +9,30 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play DMST103.</tw-noscript></noscript></tw-story>
-<tw-storydata name="DMST103" startnode="1" creator="Twine" creator-version="2.3.16" ifid="C2672A77-5A2C-4C51-B499-7B2467C11289" zoom="1" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="" position="370,136" size="100,100">You awaken in the void. It&#39;s not night, it&#39;s not day. It&#39;s just nothing.
-
-(set: $bossesdefeated to 0)
+<tw-storydata name="DMST103" startnode="1" creator="Twine" creator-version="2.3.16" ifid="C2672A77-5A2C-4C51-B499-7B2467C11289" zoom="0.6" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">.passage {
+	/* This only affects passages */
+	
+	  
+}
+.passage a {
+	/* This affects passage links */
+	
+	
+}
+.passage a:hover {
+	/* This affects links while the cursor is over them */
+	
+	
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="" position="370,136" size="100,100">You awaken in the void. It&#39;s not night, it&#39;s not day. It&#39;s just nothing.
 
 [[search blindly for something to grasp on to-&gt;Chapter 1: A Concrete Jungle With Neon Vines]]
+OR
+[[wait-&gt;Wait]]
 
-[[wait-&gt;Wait]]</tw-passagedata><tw-passagedata pid="2" name="Chapter 1: A Concrete Jungle With Neon Vines" tags="" position="576,283" size="100,100">You search around for something to grasp on to. A cold metal chain brushes the back of your hand.
+(set: $boss1defeated to false)
+(set: $boss2defeated to false)
+(set: $boss3defeated to false)</tw-passagedata><tw-passagedata pid="2" name="Chapter 1: A Concrete Jungle With Neon Vines" tags="" position="497.6666666666667,247" size="200,200">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/Street.png&quot;&gt;]
+You search around for something to grasp on to. A cold metal chain brushes the back of your hand.
 You yank it.
 Suddenly, the world lights up and you find yourself standing on a long city street, a line of buildings on either side.
 You look up at the chain you had grabbed on to as it disappears into the sky.
@@ -28,12 +45,14 @@ OR
 
 [[search blindly for something to grasp on to-&gt;Chapter 1: A Concrete Jungle With Neon Vines]]
 OR
-[[wait-&gt;Wait]]</tw-passagedata><tw-passagedata pid="4" name="search the sides of the road for a way through the tubes" tags="" position="631,462" size="100,100">You scour the walls searching for a way out.
+[[wait-&gt;Wait]]</tw-passagedata><tw-passagedata pid="4" name="search the sides of the road for a way through the tubes" tags="" position="707.6666666666666,505.3333333333333" size="100,100">You scour the walls searching for a way out.
 The vines are too thick, however, covering all the doors and windows.
 
-[[start down the street-&gt;continue down the street 1]]</tw-passagedata><tw-passagedata pid="5" name="continue down the street 1" tags="" position="708,100" size="100,100">This street appears to go on forever...
+[[start down the street-&gt;continue down the street 1]]</tw-passagedata><tw-passagedata pid="5" name="continue down the street 1" tags="" position="708,99" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/Street.png&quot;&gt;]
+This street appears to go on forever...
 
-[[continue down the street-&gt;continue down the street 2]]</tw-passagedata><tw-passagedata pid="6" name="continue down the street 2" tags="" position="921,94" size="100,100">You have been walking for what feels like hours now with no end in sight...
+[[continue down the street-&gt;continue down the street 2]]</tw-passagedata><tw-passagedata pid="6" name="continue down the street 2" tags="" position="921,94" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/Street.png&quot;&gt;]
+You have been walking for what feels like hours now with no end in sight...
 
 [[continue down the street-&gt;continue down the street 3]] </tw-passagedata><tw-passagedata pid="7" name="continue down the street 3" tags="" position="1109,136" size="100,100">At long last you have made it.
 A dead end.
@@ -55,29 +74,29 @@ There is but one door that isn&#39;t completely obscured by the vines.
 
 [[stay-&gt;fight the street beast]]
 OR
-[[escape-&gt;Escape Chapter 1]]</tw-passagedata><tw-passagedata pid="10" name="fight the street beast" tags="" position="1329,456" size="100,100">As the dust settles, you stand heroically, challenging the beast that stands before you.
+[[escape-&gt;Escape Chapter 1]]</tw-passagedata><tw-passagedata pid="10" name="fight the street beast" tags="" position="1328,455" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/NeonBeast.gif&quot;&gt;]
+As the dust settles, you stand heroically, challenging the beast that stands before you.
 It is made entirely up of the same neon tubing that seems to cover the buildings around you.
 The tubes clink together as the creature moves towards you slowly.
 
-[[check your pockets for something to use as a weapon-&gt;CH1 boss check pockets]]</tw-passagedata><tw-passagedata pid="11" name="Escape Chapter 1" tags="" position="1332,948" size="100,100">As you approach the door, you notice a keyhole.
+[[check your pockets for something to use as a weapon-&gt;CH1 boss check pockets]]</tw-passagedata><tw-passagedata pid="11" name="Escape Chapter 1" tags="" position="1331,947" size="100,100">As you approach the door, you notice a keyhole.
 However, despite this, the door still opened seemlessly without the need for a key.
 
-[[continue-&gt;Walk through door 1]]</tw-passagedata><tw-passagedata pid="12" name="CH1 boss check pockets" tags="" position="1524,467" size="100,100">You search your pockets to find something to use as a weapon.
+[[continue-&gt;Walk through door 1]]</tw-passagedata><tw-passagedata pid="12" name="CH1 boss check pockets" tags="" position="1524,467" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/NeonBeast.gif&quot;&gt;]
+You search your pockets to find something to use as a weapon.
 You feel something wooden yet heavy and begin to pull.
 Out of your front pants pocket comes a standard wooden baseball bat.
 This will have to do.
 
 The beast is almost on top of you.
 
-(set: $boss1health to 5)
-(set: $boss1stance to 0)
-(set: $playerhealth to 5)
-
 [[swing-&gt;CH1 boss attack]]
 OR
-[[watch the beast&#39;s movement-&gt;CH1 boss anticipate]]</tw-passagedata><tw-passagedata pid="13" name="CH1 boss attack" tags="" position="1811,617" size="100,100">(if: $boss1stance is 0)[
-	(set: $boss1health to $boss1health-1)
-	(set: $boss1stance to 1)
+[[watch the beast&#39;s movement-&gt;CH1 boss anticipate]]{
+(set: $boss1health to 5)
+(set: $boss1stance to 1)
+(set: $playerhealth to 5)}</tw-passagedata><tw-passagedata pid="13" name="CH1 boss attack" tags="" position="1807,611" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/NeonBeast.gif&quot;&gt;]
+(if: $boss1stance is 0)[
 	(if: $boss1health is 0)[
 	Large cracks have formed along the beast&#39;s neon tube frame under the weight of your bat. It lets out one final hiss as its glass frame shatters, the light escaping into the dark void of a sky.
 	In the beast&#39;s place, there lies a old, rusted key which you quickly snatch up.
@@ -87,52 +106,378 @@ OR
 	(else:)[
 	You land the hit!
 	The beast stumbles back and hisses gas as it begins to shift its weight, glowing brighter than before.
+	
 	[[swing-&gt;CH1 boss attack]]
 	OR
 	[[watch the beast-&gt;CH1 boss anticipate]]
-	]
+	]{
+	(set: $boss1health to $boss1health-1)
+	(set: $boss1stance to 1)}
 ]
 (elseif: $boss1stance is 1)[
-	(set: $boss1stance to 0)
-	(set: $playerhealth to $playerhealth-1)
+(set: $playerhealth to $playerhealth-1)
 	You swing your bat at the beast but before it can land, you are struck by reinforced glass. The beast hunches over, the light emitting from it dimming slightly.
 	
-	(if: $playerhealth &lt; 3)[
-	You can&#39;t take many more hits like that, be careful.
+	(if: $playerhealth is 0)[
+		You have been defeated.
+		[[Retry?-&gt;CH1 boss check pockets]]
 	]
+	(else-if: $playerhealth &lt; 3)[
+	You can&#39;t take many more hits like that, be careful.
 	
 	[[swing-&gt;CH1 boss attack]]
 	OR
 	[[watch the beast-&gt;CH1 boss anticipate]]
-]</tw-passagedata><tw-passagedata pid="14" name="CH1 boss anticipate" tags="" position="1817,426" size="100,100">(if: $boss1stance is 0)[
-	(set: $boss1stance = 1)
+	]
+	(else:)[
+	[[swing-&gt;CH1 boss attack]]
+	OR
+	[[watch the beast-&gt;CH1 boss anticipate]]
+	]{
+	(set: $boss1stance to 0)}
+
+]</tw-passagedata><tw-passagedata pid="14" name="CH1 boss anticipate" tags="" position="1817,426" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/NeonBeast.gif&quot;&gt;]
+(if: $boss1stance is 0)[{
+	(set: $boss1stance = 1)}
 	You lie in wait as the beast appears to recharge.
 	It gets back up, shining its neon colors brighter than before.
 ]
-(elseif: $boss1stance is 1)[
-	(set: $boss1stance to 0)
+(elseif: $boss1stance is 1)[{
+	(set: $boss1stance to 0)}
 	The beast charges at you, but you are ready.
 	You roll out of the way, narrowly dodging its attack.
 	The beast hunches over, its light dimming slightly.
 ]
-
 [[swing-&gt;CH1 boss attack]]
 OR
-[[watch the beast-&gt;CH1 boss anticipate]]</tw-passagedata><tw-passagedata pid="15" name="Exit Chapter 1 Victorious" tags="" position="1669,894" size="100,100">(set: $bossesdefeated to $bossesdefeated+1)
-
+[[watch the beast-&gt;CH1 boss anticipate]]</tw-passagedata><tw-passagedata pid="15" name="Exit Chapter 1 Victorious" tags="" position="1669,894" size="100,100">{(set: $boss1defeated to true)
+}
 As you approach the door, you notice a keyhole.
 
 [[place the key in the hole-&gt;Use key 1]]
-[[try the door without the key-&gt;Don&#39;t use key 1]]</tw-passagedata><tw-passagedata pid="16" name="Use key 1" tags="" position="1609,1026" size="100,100">(set: $key1use to 1)
-
+[[try the door without the key-&gt;Don&#39;t use key 1]]</tw-passagedata><tw-passagedata pid="16" name="Use key 1" tags="" position="1605,1024" size="100,100">{(set: $havekey1 to false)
+}
 You place the key into the keyhole and turn.
 The door opens.
+The key evaporates.
 
-[[continue-&gt;Walk through door 1]]</tw-passagedata><tw-passagedata pid="17" name="Don&#39;t use key 1" tags="" position="1744,1023" size="100,100">(set: $key1use to 0)
-
+[[continue-&gt;Walk through door 1]]</tw-passagedata><tw-passagedata pid="17" name="Don&#39;t use key 1" tags="" position="1743,1023" size="100,100">{(set: $havekey1 to true)
+}
 You try the doorknob and the door opens easily.
 
-[[continue-&gt;Walk through door 1]]</tw-passagedata><tw-passagedata pid="18" name="Walk through door 1" tags="" position="1659,1204" size="100,100">As you walk through the door, your baseball bat evaporates.</tw-passagedata></tw-storydata>
+[[continue-&gt;Walk through door 1]]</tw-passagedata><tw-passagedata pid="18" name="Walk through door 1" tags="" position="1659,1204" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/windowsxp.gif&quot;&gt;]
+(if: $boss1defeated)[
+As you walk through the door, your baseball bat liquifies and absorbs into the doorframe around you.
+]
+Terrified by the laws of physics, you emerge onto a sunny landscape that strongly reminds you of every office from the early 2000s.
+Out in front of you is a stone brick trail that leads up and over the hills.
+
+[[start down the trail-&gt;Chapter 2: An XPerienced CEO]]</tw-passagedata><tw-passagedata pid="19" name="Chapter 2: An XPerienced CEO" tags="" position="1410.6666666666667,1253.3333333333333" size="200,200">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/windowsxp.gif&quot;&gt;]
+[[Keep walking down the path-&gt;Continue down the path]]
+[[Look at your surroundings-&gt;Look around]]</tw-passagedata><tw-passagedata pid="20" name="Continue down the path" tags="" position="1584,1503" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/windowsxp.gif&quot;&gt;]
+Because you decided not to soak in your surroundings you nearly run into the large oak door.
+
+[[continue-&gt;the door]]</tw-passagedata><tw-passagedata pid="21" name="Look around" tags="" position="1734,1505" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/windowsxp.gif&quot;&gt;]
+You look around at the endless grass hills, no other life in sight.
+You look up towards the blue sky and get blinded by the sun.
+Your gut tells you that this sun is abnormally cool for a hot ball of fire burning in the sky.
+
+[[continue-&gt;the door]]</tw-passagedata><tw-passagedata pid="22" name="the door" tags="" position="1656,1647" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/windowsxp.gif&quot;&gt;]
+You are now close enough to the door to see that the sign says &quot;The Big Boss&#39;s Office&quot;.
+Perhaps you&#39;re looking for a raise.
+
+[[open the door-&gt;sewer]]</tw-passagedata><tw-passagedata pid="23" name="sewer" tags="" position="1656,1797" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/Sewer.png&quot;&gt;]
+You walk through the door and a foul odor surrounds you.
+You have found yourself in a small, torch-lit tunnel with another oak wood door at the end with a sign on it.
+As you begin to walk towards the door you notice your feet dragging a bit.
+You look down and discover the source of the stench.
+You appear to be walking through a green sludge, reminescent of sewage.
+Sunken in the liquid are several office chairs and desks that you continuosly stub your toes on.
+
+[[at last the door-&gt;door number 2]]</tw-passagedata><tw-passagedata pid="24" name="door number 2" tags="" position="1655,1947" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/Sewer.png&quot;&gt;]
+As you approach the door, you can make out some text on it.
+&quot;NO RAISES AND NO SEVERANCE PAY&quot;
+That&#39;s hardly reasonable.
+The wall to your right opens up and a green exit sign appears right above it.
+
+[[leave out the newly found passage-&gt;Escape Chapter 2]]
+OR
+[[enter the boss&#39;s office-&gt;Fight the CEO]]</tw-passagedata><tw-passagedata pid="25" name="Fight the CEO" tags="" position="1453,2084" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/crow.gif&quot;&gt;}]
+As you walk through the door, you find yourself in a modern looking conference room with one wall made of windows.
+Looking out, you can see you are still in some sort of city.
+Down below you can make out a neon glow in the darkness.
+At the far end of the room is a suited figure.
+He is holding a curved walking stick and is wearing a crow mask.
+&quot;Finally... Alright give the pitch, what&#39;re we looking at here.&quot;
+You look behind you and see a slideshow projected on the wall with the current slide showing text that reads &quot;How to Make Money Quick&quot;.
+You then feel something in your hands that wasn&#39;t there before: a clicker with four buttons on it and a couple notecards.
+I guess it&#39;s time to expose this guy for his horrible treatment of his employees.
+&quot;Are you going to pitch me something or just waste my time here?!&quot; yells the crow.
+
+[[review notecards-&gt;review notecards]]
+[[push the button that reads &quot;Money&quot;-&gt;Money Button]]
+[[push the button that reads &quot;Poverty&quot;-&gt;Poverty Button]]
+[[push the button that reads &quot;Woman&quot;-&gt;Woman Button]]
+[[push the button that reads &quot;Record&quot;-&gt;Record Button]]
+{
+(set: $ceoattention to true)
+(set: $playerspotted to 5)
+(set: $playerrec to 0)
+(set: $ceorec to 0)
+(set: $ceomood to false)
+(set: $recording to false)
+(set: $currentslide to &quot;intro&quot;)}</tw-passagedata><tw-passagedata pid="26" name="review notecards" tags="" position="1453,2239" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/crow.gif&quot;&gt;}]
+Here are your notecards:
+Notecard 1 starts with &quot;So here&#39;s how a pyramid sceme works...&quot;
+Notecard 2 starts with &quot;Here&#39;s how we can help the lower class...&quot;
+Notecard 3 starts with &quot;The gender paygap is a serious issue...&quot;
+
+[[push the button that reads &quot;Money&quot;-&gt;Money Button]]
+[[push the button that reads &quot;Poverty&quot;-&gt;Poverty Button]]
+[[push the button that reads &quot;Woman&quot;-&gt;Woman Button]]
+[[push the button that reads &quot;Record&quot;-&gt;Record Button]]</tw-passagedata><tw-passagedata pid="27" name="Money Button" tags="" position="1047,2080" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/crow.gif&quot;&gt;}]
+The slide behind you changes to a png of a pile of money.
+This draws the CEO&#39;s attention.
+
+[[read Notecard 1-&gt;Notecard 1]]
+[[read Notecard 2-&gt;Notecard 2]]
+[[read Notecard 3-&gt;Notecard 3]]
+[[push the button that reads &quot;Record&quot;-&gt;Record Button]]
+{
+(set: $currentslide to &quot;money&quot;)
+(set: $crowattention to false)}</tw-passagedata><tw-passagedata pid="28" name="Poverty Button" tags="" position="1050,2227" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/crow.gif&quot;&gt;}]
+The slide behind you changes to an image of an impoverished community.
+This draws the CEO&#39;s attention.
+
+[[read Notecard 1-&gt;Notecard 1]]
+[[read Notecard 2-&gt;Notecard 2]]
+[[read Notecard 3-&gt;Notecard 3]]
+[[push the button that reads &quot;Record&quot;-&gt;Record Button]]
+{
+(set: $currentslide to &quot;poverty&quot;)
+(set: $crowattention to false)}</tw-passagedata><tw-passagedata pid="29" name="Woman Button" tags="" position="1052,2367" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/crow.gif&quot;&gt;}]
+The slide behind you changes to a stock image of a stronge independant businesswoman.
+
+[[read Notecard 1-&gt;Notecard 1]]
+[[read Notecard 2-&gt;Notecard 2]]
+[[read Notecard 3-&gt;Notecard 3]]
+[[push the button that reads &quot;Record&quot;-&gt;Record Button]]
+{
+(set: $currentslide to &quot;woman&quot;)
+(set: $crowattention to false)}</tw-passagedata><tw-passagedata pid="30" name="Record Button" tags="" position="1721,2205" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/crow.gif&quot;&gt;}]
+(if: $playerspotted is 0)[
+	&quot;That&#39;s it, you&#39;re out! I&#39;m calling security.&quot;
+	Suddenly, two security guards burst through the door and throw you out of the room.
+	
+	[[enter the boss&#39;s office and retry-&gt;Fight the CEO]]
+	OR
+	[[exit out the door in the wall-&gt;Escape Chapter 2]]{
+}]
+(else-if: $bossattention is true)[{
+	(set: $playerspotted to $playerspotted - 1)}
+	&quot;Hey what&#39;re you doin there! If I catch you doing that again you&#39;re out of here!&quot;{
+}]
+(else:)[
+	You hit the &quot;Record&quot; button and it faintly lights up red.
+	The labels on the other buttons have now disappeared.
+	Pushing them does nothing.
+
+	[[read Notecard 1-&gt;Notecard 1]]
+	[[read Notecard 2-&gt;Notecard 2]]
+	[[read Notecard 3-&gt;Notecard 3]]{
+}]{
+(set: $recording to true)}</tw-passagedata><tw-passagedata pid="31" name="Notecard 1" tags="" position="1920,2077" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/crow.gif&quot;&gt;}]
+You read off Notecard 1, talking about a ton of sketchy ways to earn money.
+(if: $currentslide is &quot;money&quot;)[
+	The boss appears to be happy.
+	&quot;Love myself some money&quot;{
+	(set: $ceomood to true)}]
+(else:)[
+	&quot;I don&#39;t see how these connect&quot; says the crow.
+	He sounds annoyed.
+	(set: $ceomood to false)]
+(if: $recording)[{
+(set: $playerrec to $playerrec + 1)
+}]
+[[continue-&gt;boss 2 choose]]{
+(set: $recording to false)
+(set: $ceoattention to true)}</tw-passagedata><tw-passagedata pid="32" name="Notecard 2" tags="" position="1926,2220" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/crow.gif&quot;&gt;}]
+You read off of Notecard 2, talking about the different ways in which we can help the impoverished
+(if: $currentslide is &quot;poverty&quot;)[
+	(if: $ceomood is true)[
+	The boss shares some shocking statements.
+	&quot;There&#39;s a reason why I wear this mask. It&#39;s because the poor are like the plague to me&quot;.{
+	(set: $ceomood to false)
+	}]
+(else:)[
+	The boss sits silently in anger. Try and find a way to cheer him up.
+]
+(if: $recording)[{
+	(set: $ceorec to $ceorec + 1)}
+]{
+	(set: $ceomood to true)}
+]
+(else:)[
+	&quot;I don&#39;t see how these connect&quot; says the crow.
+	He sounds annoyed.{
+	(set: $ceomood to false)}
+]
+[[continue-&gt;boss 2 choose]]{
+(set: $ceoattention to true)}</tw-passagedata><tw-passagedata pid="33" name="Notecard 3" tags="" position="1925,2374" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/crow.gif&quot;&gt;}]
+You read off of Notecard 3, discussing issues surrounding misogyny and the gender pay gap.
+(if: $currentslide is &quot;woman&quot;)[
+	(if: $ceomood is true)[
+		The boss says some shockingly sexist statements.{
+		(set: $ceomood to false)}
+	]
+	(else:)[
+		The boss sits silently in anger. Try and find a way to cheer him up.
+	]
+	(if: $recording)[{
+		(set: $ceorec to $ceorec + 1)}
+	]
+]
+(else:)[
+	&quot;I don&#39;t see how these connect&quot; says the crow.
+	He sounds annoyed.{
+	(set: $ceomood to false)}
+]
+[[continue-&gt;boss 2 choose]]{
+(set: $ceoattention to true)}</tw-passagedata><tw-passagedata pid="34" name="boss 2 choose" tags="" position="1458,2409" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/crow.gif&quot;&gt;}]
+(if: $playerrec + $ceorec is 3)[
+	(if: $playerrec &gt; 0)[
+		You hear a disembodied voice over the loudspeaker system, &quot;hey, this is HR, we&#39;re calling security to kick you out since we keep receiving these recordings from you promoting sketchy ways to earn money.&quot;
+		The notecards have failed you. Looks like you&#39;ll need to be more careful next time.
+		Guards violently break through the door and sieze you, dragging you outside the conference room.
+		
+		[[enter the boss&#39;s office and retry-&gt;Fight the CEO]]
+		OR
+		[[exit out the door in the wall-&gt;Escape Chapter 2]]{
+	}]
+	(else:)[
+		You hear a disembodied voice over the loudspeaker system, &quot;hey, this is HR, we keep receiving these recordings of the big honcho talking being super controversial and innapropriate so we&#39;re gonna fire him or something, I don&#39;t know.&quot;
+		&quot;I can&#39;t believe this is happening to me&quot; says the CEO as he is escorted out of the room by security.
+		You see that he has left his keys on the table. You look through the keyring and find a chrome car key with a flip-out manual key.
+		
+		[[press the key&#39;s lock button-&gt;car lock 1]]
+		[[press the key&#39;s unlock button-&gt;car unlock 1]]
+		[[press the key&#39;s alarm button-&gt;car alarm 1]]{
+		(set: $boss2defeated to true)
+		(set: $extinguished to false)}
+	]{
+}]
+(else:)[
+	(if: $ceomood is false)[
+		The boss man doesn&#39;t seem too happy with the presentation. Find a way to cheer him up.{
+		}]
+	(else:)[
+		The boss man seems content with the presentation and is willing to participate.{
+	}]{
+	(set: $recremaining to 3-$playerrec-$ceorec)}
+	You have $recremaining recordings remaining.
+
+	[[review notecards-&gt;review notecards]]
+	[[push the button that reads &quot;Money&quot;-&gt;Money Button]]
+	[[push the button that reads &quot;Poverty&quot;-&gt;Poverty Button]]
+	[[push the button that reads &quot;Woman&quot;-&gt;Woman Button]]
+	[[push the button that reads &quot;Record&quot;-&gt;Record Button]]]</tw-passagedata><tw-passagedata pid="35" name="car lock 1" tags="" position="1288,2564" size="100,100">You press the lock button on the car key and nothing happens.
+
+[[press the key&#39;s unlock button-&gt;car unlock 1]]
+[[press the key&#39;s alarm button-&gt;car alarm 1]]
+[[exit out the door to the conference room-&gt;back to the sewer 1]]</tw-passagedata><tw-passagedata pid="36" name="car unlock 1" tags="" position="1458,2560" size="100,100">You press the unlock button for the bosses car but nothing happens.
+
+[[press the key&#39;s lock button-&gt;car lock 1]]
+[[press the key&#39;s alarm button-&gt;car alarm 1]]
+[[exit out the door to the conference room-&gt;back to the sewer 1]]</tw-passagedata><tw-passagedata pid="37" name="car alarm 1" tags="" position="1609,2561" size="100,100">You press the car alarm button and instantly hear a piercing shriek of a car alarm in the conference room. Along with this, a fire extinguisher protrudes from the wall at the other end of the room.
+You hear a rushing of footsteps from outside the door.
+
+[[press the key&#39;s lock button-&gt;car lock 2]]
+[[press the key&#39;s unlock button-&gt;car unlock 2]]
+[[exit out the door to the conference room-&gt;back to the sewer 1]]</tw-passagedata><tw-passagedata pid="38" name="car lock 2" tags="" position="1535,2781" size="100,100">You press the lock button and hear the sound of the door to the room lock.
+As you proceed towards the fire extinguisher, you hear the guards knocking on the door.
+&quot;Hey let us in!&quot;
+The device is encased in a locked box.
+
+[[press the key&#39;s unlock button-&gt;car unlock 3]]
+[[exit out the door to the conference room-&gt;back to the sewer 1]]</tw-passagedata><tw-passagedata pid="39" name="car unlock 2" tags="" position="1683,2780" size="100,100">You press the unlock button and nothing happens. The guards burst into the room. Noticing nothing is on fire or broken, one of the guards takes out his phone.
+&quot;Hey Sharon. Yeah I&#39;m checking out the room right now. Looks like a misfire, gotta get that checked. Yeah you can turn the alarms off now.&quot;
+As the guards leave the room, the alarm shuts off, the fire extinguisher getting consumed by the wall.
+
+[[press the key&#39;s lock button-&gt;car lock 1]]
+[[press the key&#39;s unlock button-&gt;car unlock 1]]
+[[press the key&#39;s alarm button-&gt;car alarm 1]]
+[[exit out the door to the conference room-&gt;back to the sewer 1]]</tw-passagedata><tw-passagedata pid="40" name="car unlock 3" tags="" position="1535,2930" size="100,100">You unlock the casing and grab the fire extinguisher. You can now see that there is a lock floating just outside the windowed wall.
+
+[[break a window-&gt;break window 1]]
+[[exit out the door to the conference room-&gt;back to the sewer 2]]</tw-passagedata><tw-passagedata pid="41" name="break window 1" tags="" position="1535,3081" size="100,100">You break the window and the glass falls onto, what you assume to be, the streets below. You see the keyhole, floating there, just within your reach.
+
+[[break another window-&gt;break window 2]]
+[[put the key in the lock-&gt;use key 2]]
+[[exit out the door to the conference room-&gt;back to the sewer 2]]{
+(set: $windowbroken to true)}</tw-passagedata><tw-passagedata pid="42" name="break window 2" tags="" position="1534,3231" size="100,100">You decide to break another window, it&#39;s pretty fun.
+
+[[break another window-&gt;break window 3]]
+[[put the key in the lock-&gt;use key 2]]
+[[exit out the door to the conference room-&gt;back to the sewer 2]]</tw-passagedata><tw-passagedata pid="43" name="back to the sewer 1" tags="" position="1007,2916" size="100,100">You exit through the familiar oak door back into the sewer. The wall to your left is still open with the exit sign on.
+
+[[go back into the room-&gt;and back to the room again 1]]
+[[exit through the hole in the wall-&gt;don&#39;t use key 2]]</tw-passagedata><tw-passagedata pid="44" name="and back to the room again 1" tags="" position="1346,2968" size="100,100">The conference room is just how you left it.
+
+[[press the key&#39;s lock button-&gt;car lock 1]]
+[[press the key&#39;s unlock button-&gt;car unlock 1]]
+[[press the key&#39;s alarm button-&gt;car alarm 1]]</tw-passagedata><tw-passagedata pid="45" name="don&#39;t use key 2" tags="" position="975,3154" size="100,100">Peering through the door you only see a white void.
+As you step through, the wall closes behind you and you are blinded by the light.{
+(set: $havekey2 to true)}
+
+[[continue-&gt;Chapter 3: The Elevator and the Fool]]</tw-passagedata><tw-passagedata pid="46" name="use key 2" tags="" position="1196,3244" size="100,100">You flip out the physical car key and place it into the keyhole.
+Suddenly, you are flashed by a blinding light
+
+[[continue-&gt;Chapter 3: The Elevator and the Fool]]{
+(set: $havekey2 to false)}</tw-passagedata><tw-passagedata pid="47" name="break window 3" tags="" position="1534,3381" size="100,100">You break another window. It&#39;s even more fun the third time!
+
+[[break another window-&gt;break window 4]]
+[[put the key in the lock-&gt;use key 2]]
+[[exit out the door to the conference room-&gt;back to the sewer 2]]</tw-passagedata><tw-passagedata pid="48" name="break window 4" tags="" position="1534,3531" size="100,100">You break another window. This just doesn&#39;t get old!
+
+[[break another window-&gt;break window 5]]
+[[put the key in the lock-&gt;use key 2]]
+[[exit out the door to the conference room-&gt;back to the sewer 2]]</tw-passagedata><tw-passagedata pid="49" name="break window 5" tags="" position="1534,3681" size="100,100">You break another window. Okay it&#39;s starting to get a bit old.
+
+[[break another window-&gt;break window 6]]
+[[put the key in the lock-&gt;use key 2]]
+[[exit out the door to the conference room-&gt;back to the sewer 2]]</tw-passagedata><tw-passagedata pid="50" name="break window 6" tags="" position="1534,3831" size="100,100">Okay I didn&#39;t even know there were this many windows.
+
+[[break another window-&gt;break window 7]]
+[[put the key in the lock-&gt;use key 2]]
+[[exit out the door to the conference room-&gt;back to the sewer 2]]</tw-passagedata><tw-passagedata pid="51" name="break window 7" tags="" position="1534,3981" size="100,100">Alright I&#39;m calling it here, there&#39;re no more windows to break
+
+[[break another window-&gt;break window 8]]
+[[put the key in the lock-&gt;use key 2]]
+[[exit out the door to the conference room-&gt;back to the sewer 2]]</tw-passagedata><tw-passagedata pid="52" name="break window 8" tags="" position="1542,4116" size="100,100">There are no more windows. You choose to hit the wall instead. This punctures a hole in the fire extinguisher, jettisoning it off out the window.
+
+[[put the key in the lock-&gt;use key 2]]
+[[exit out the door to the conference room-&gt;back to the sewer 2]]{
+(set: $extinguished to true)}</tw-passagedata><tw-passagedata pid="53" name="back to the sewer 2" tags="" position="847,2910" size="100,100">You exit through the familiar oak door back into the sewer. The wall to your left is still open with the exit sign on.
+
+[[go back into the room-&gt;and back to the room again 2]]
+[[exit through the hole in the wall-&gt;don&#39;t use key 2]]</tw-passagedata><tw-passagedata pid="54" name="and back to the room again 2" tags="" position="1219,2967" size="100,100">The conference room is just how you left it.
+
+(if: $extinguished is false)[
+	[[break a window-&gt;break window 1]]
+	(if: $windowbroken is true)[
+	[[put the key in the lock-&gt;use key 2]]
+	]
+]</tw-passagedata><tw-passagedata pid="55" name="Chapter 3: The Elevator and the Fool" tags="" position="2213.6666666666665,3461.3333333333335" size="200,200">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/elevator.png&quot;&gt;}]
+As the light fades, you find yourself peering into the conference room from the outside.
+Panicked, you look down and notice you are standing on a glossy stone platform.
+Turning around, you see a massive elevator shaft that stretches up into the dark night sky.
+
+
+This is where our story ends for now.
+To be continued...</tw-passagedata><tw-passagedata pid="56" name="Escape Chapter 2" tags="" position="1957,1867" size="100,100">Peering through the door you only see a white void.
+As you step through, the wall closes behind you and you are blinded by the light.
+
+[[continue-&gt;Chapter 3: The Elevator and the Fool]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
