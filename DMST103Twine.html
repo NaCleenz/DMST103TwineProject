@@ -538,12 +538,27 @@ Beyond the wall you see that some sort of singularity is absorbing a portion of 
 It beckons you with a red &quot;EXIT&quot; sign orbiting around it.
 
 [[go through the door-&gt;the news room]]
-[[exit through the singularity-&gt;escape the dream]]</tw-passagedata><tw-passagedata pid="66" name="the news room" tags="" position="2701,2352.333333333333" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/NewsRoom.png&quot;&gt;}]
+[[exit through the singularity-&gt;escape]]</tw-passagedata><tw-passagedata pid="66" name="the news room" tags="" position="2701,2352.333333333333" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/NewsRoom.png&quot;&gt;}]
 You enter through the door and are met by an intense heat.
 Similar to the elevator platform, the floor is a glossy stone while the table in the center of the room is a much coarser, darker stone.
 Behind the table is a large, red electronic desplay with the text &quot;NEWS&quot; sprawled on it.
 
-[[Look around-&gt;look around the news room]]</tw-passagedata><tw-passagedata pid="67" name="escape the dream" tags="" position="2939.333333333333,2313.9999999999995" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="68" name="look around the news room" tags="" position="2684.333333333333,2205.6666666666665" size="100,100">You search around for any sign of life.
+[[Look around-&gt;look around the news room]]</tw-passagedata><tw-passagedata pid="67" name="escape" tags="" position="3114.333333333333,2353.9999999999995" size="100,100">You exit out the hole in the wall, getting sucked into the singularity.
+You suddenly feel weightless, floating in the void.
+
+(if: $boss1defeated and $boss2defeated)[
+	You have completed 2/3 of the game.
+]
+(if: $boss1defeated is true and $boss2defeated is false)[
+	You have completed 1/3 of the game.
+]
+(if: $boss1defeated is false and $boss2defeated is true)[
+	You have completed 1/3 of the game.
+]
+(if: $boss1defeated is false and $boss2defeated is false)[
+	You have skipped most of the game.
+	I recommend going back and giving it another go.
+]</tw-passagedata><tw-passagedata pid="68" name="look around the news room" tags="" position="2684.333333333333,2205.6666666666665" size="100,100">You search around for any sign of life.
 As you approach the centeral table, you feel the heat getting hotter than ever before.
 
 [[check behind the table-&gt;clown intro]]</tw-passagedata><tw-passagedata pid="69" name="clown intro" tags="" position="2679.333333333333,2045.6666666666663" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
@@ -939,6 +954,16 @@ On the other side, you see a void, as dark as the one you started in.
 	Floating in the void in front of you is an obsidion box with three keyholes.
 	
 	[[place the keys into the keyholes-&gt;open the box]]
+]
+
+(if: $boss1defeated is true and $boss2defeated is false)[
+	You missed an encounter! I recommend going back and giving it another go.
+]
+(if: $boss1defeated is false and $boss2defeated is true)[
+	You missed an encounter! I recommend going back and giving it another go.
+]
+(if: $boss1defeated is false and $boss2defeated is false)[
+	You missed two encounters! I recommend going back and giving it another go.
 ]</tw-passagedata><tw-passagedata pid="109" name="open the box" tags="" position="7645.999999999997,1438.999999999999" size="100,100">You place the keys into the keyholes and open the box.
 Inside you find all of your memories.
 
@@ -959,7 +984,7 @@ Defy the odds.
 
 We&#39;ll make it yet :)
 
-[[END-&gt;Thanks]]</tw-passagedata><tw-passagedata pid="110" name="Thanks" tags="" position="7650.999999999997,1253.999999999999" size="100,100">Thanks for playing my game. There&#39;s so much going on in the world all the time, it can get a bit overwhelming. Thus, I wanted to make a fun/challenging experience with some some light-hearted real life themes. 
+[[END-&gt;Thanks]]</tw-passagedata><tw-passagedata pid="110" name="Thanks" tags="" position="7629.33333333333,1257.3333333333323" size="100,100">Thanks for playing my game. There&#39;s so much going on in the world all the time, it can get a bit overwhelming. Thus, I wanted to make a fun/challenging experience with some some light-hearted real life themes. 
 
 One of the most rewarding parts of this project has been figuring out ways to make complex and intricate experiences under the limitations of Twine and my initial knowledge of the software.
 
