@@ -23,7 +23,7 @@
 	/* This affects links while the cursor is over them */
 	
 	
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="" position="370,137.66666666666666" size="100,100">You awaken in the void. It&#39;s not night, it&#39;s not day. It&#39;s just nothing.
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="" position="370,137" size="100,100">You awaken in the void. It&#39;s not night, it&#39;s not day. It&#39;s just nothing.
 
 [[search blindly for something to grasp on to-&gt;Chapter 1: A Concrete Jungle With Neon Vines]]
 OR
@@ -202,7 +202,7 @@ The wall to your right opens up and a green exit sign appears right above it.
 
 [[leave out the newly found passage-&gt;Escape Chapter 2]]
 OR
-[[enter the boss&#39;s office-&gt;Fight the CEO]]</tw-passagedata><tw-passagedata pid="25" name="Fight the CEO" tags="" position="1468,2085.6666666666665" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/crow.gif&quot;&gt;}]
+[[enter the boss&#39;s office-&gt;Fight the CEO]]</tw-passagedata><tw-passagedata pid="25" name="Fight the CEO" tags="" position="1468,2085" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/crow.gif&quot;&gt;}]
 As you walk through the door, you find yourself in a modern looking conference room with one wall made of windows.
 Looking out, you can see you are still in some sort of city.
 Down below you can make out a neon glow in the darkness.
@@ -226,7 +226,7 @@ I guess it&#39;s time to expose this guy for his horrible treatment of his emplo
 (set: $ceorec to 0)
 (set: $ceomood to false)
 (set: $recording to false)
-(set: $currentslide to &quot;intro&quot;)}</tw-passagedata><tw-passagedata pid="26" name="review notecards" tags="" position="1443,2237.3333333333335" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/crow.gif&quot;&gt;}]
+(set: $currentslide to &quot;intro&quot;)}</tw-passagedata><tw-passagedata pid="26" name="review notecards" tags="" position="1443,2237" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/crow.gif&quot;&gt;}]
 Here are your notecards:
 Notecard 1 starts with &quot;So here&#39;s how a pyramid sceme works...&quot;
 Notecard 2 starts with &quot;Here&#39;s how we can help the lower class...&quot;
@@ -306,44 +306,43 @@ You read off of Notecard 2, talking about the different ways in which we can hel
 (if: $currentslide is &quot;poverty&quot;)[
 	(if: $ceomood is true)[
 	The boss shares some shocking statements.
-	&quot;There&#39;s a reason why I wear this mask. It&#39;s because the poor are like the plague to me&quot;.{
-	(set: $ceomood to false)
-	}]
+	&quot;There&#39;s a reason why I wear this mask. It&#39;s because the poor are like the plague to me&quot;.]
 (else:)[
 	The boss sits silently in anger. Try and find a way to cheer him up.
 ]
-(if: $recording)[{
+(if: $recording and $ceomood is true)[{
 	(set: $ceorec to $ceorec + 1)}
-]{
-	(set: $ceomood to true)}
+]
 ]
 (else:)[
 	&quot;I don&#39;t see how these connect&quot; says the crow.
-	He sounds annoyed.{
-	(set: $ceomood to false)}
+	He sounds annoyed.
 ]
 [[continue-&gt;boss 2 choose]]{
-(set: $ceoattention to true)}</tw-passagedata><tw-passagedata pid="33" name="Notecard 3" tags="" position="1925,2374" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/crow.gif&quot;&gt;}]
+(set: $ceoattention to true)
+(set: $recording to false)
+(set: $ceomood to false)
+}</tw-passagedata><tw-passagedata pid="33" name="Notecard 3" tags="" position="1925,2374" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/crow.gif&quot;&gt;}]
 You read off of Notecard 3, discussing issues surrounding misogyny and the gender pay gap.
 (if: $currentslide is &quot;woman&quot;)[
 	(if: $ceomood is true)[
-		The boss says some shockingly sexist statements.{
-		(set: $ceomood to false)}
+		The boss says some shockingly sexist statements.
 	]
 	(else:)[
 		The boss sits silently in anger. Try and find a way to cheer him up.
 	]
-	(if: $recording)[{
-		(set: $ceorec to $ceorec + 1)}
+	(if: $recording and $ceomood is true)[
 	]
 ]
 (else:)[
 	&quot;I don&#39;t see how these connect&quot; says the crow.
-	He sounds annoyed.{
-	(set: $ceomood to false)}
+	He sounds annoyed.
 ]
 [[continue-&gt;boss 2 choose]]{
-(set: $ceoattention to true)}</tw-passagedata><tw-passagedata pid="34" name="boss 2 choose" tags="" position="1443,2404" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/crow.gif&quot;&gt;}]
+(set: $ceoattention to true)
+(set: $recording to false)
+(set: $ceomood to false)
+}</tw-passagedata><tw-passagedata pid="34" name="boss 2 choose" tags="" position="1443,2404" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/crow.gif&quot;&gt;}]
 (if: $playerrec + $ceorec is 3)[
 	(if: $playerrec &gt; 0)[
 		You hear a disembodied voice over the loudspeaker system, &quot;hey, this is HR, we&#39;re calling security to kick you out since we keep receiving these recordings from you promoting sketchy ways to earn money.&quot;
@@ -467,7 +466,7 @@ Suddenly, you are flashed by a blinding light
 	(if: $windowbroken is true)[
 	[[put the key in the lock-&gt;use key 2]]
 	]
-]</tw-passagedata><tw-passagedata pid="55" name="Chapter 3: The Elevator and the Fool" tags="" position="2208,3464.3333333333335" size="200,200">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/elevator.png&quot;&gt;}]
+]</tw-passagedata><tw-passagedata pid="55" name="Chapter 3: The Elevator and the Fool" tags="" position="2208,3464" size="200,200">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/elevator.png&quot;&gt;}]
 As the light fades, you find yourself peering into the conference room from the outside.
 Panicked, you look down and notice you are standing on a glossy stone platform.
 Turning around, you see a massive elevator shaft that stretches up into the dark night sky.
@@ -485,7 +484,7 @@ You press the bottom button next to the large elevator doors and here a hollow c
 You press the top button next to the large elevator doors.
 The button glows as you wait for the elevator to arrive.
 
-[[wait-&gt;wait for elevator]]</tw-passagedata><tw-passagedata pid="59" name="wait for elevator" tags="" position="2604.3333333333335,3229" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/elevator.png&quot;&gt;}]
+[[wait-&gt;wait for elevator]]</tw-passagedata><tw-passagedata pid="59" name="wait for elevator" tags="" position="2604,3229" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/elevator.png&quot;&gt;}]
 This is taking a lot longer than expected...
 
 [[wait some more-&gt;wait for elevator 2]]
@@ -494,7 +493,7 @@ You enter the elevator and see two buttons dictating the floors you may go to.
 The top button has a large 0 written on it while the bottom one has a -1.
 
 [[press the &quot;0&quot; button-&gt;go to floor 0]]
-[[press the &quot;-1&quot; button-&gt;go to floor -1]]</tw-passagedata><tw-passagedata pid="61" name="go to floor 0" tags="" position="2781,2895.6666666666665" size="100,100">You press the button with the &quot;0&quot; on it and the elevator doors close with a &quot;ding&quot;.
+[[press the &quot;-1&quot; button-&gt;go to floor -1]]</tw-passagedata><tw-passagedata pid="61" name="go to floor 0" tags="" position="2781,2895" size="100,100">You press the button with the &quot;0&quot; on it and the elevator doors close with a &quot;ding&quot;.
 You look up at the roof and notice an LED panel displaying the number &quot;-1&quot; on it.
 The elevator begins to rumble as you begin to ascend, the numbers increasingly getting closer to &quot;0&quot;.
 -0.999
@@ -514,12 +513,12 @@ You are able to get up again, the elevator, rumbling a bit less violently, the n
 An alarm sounds and the cieling lights up bright red.
 The doors open and you are met with a long plain hallway lit with red lighting.
 
-[[begin down the hallway-&gt;walk down the hallway]]</tw-passagedata><tw-passagedata pid="62" name="go to floor -1" tags="" position="2482.666666666667,2895.666666666667" size="100,100">The doors close behind you.
+[[begin down the hallway-&gt;walk down the hallway]]</tw-passagedata><tw-passagedata pid="62" name="go to floor -1" tags="" position="2482,2895" size="100,100">The doors close behind you.
 They then open again with a pronounced &quot;ding&quot;.
 You appear to be on the same floor you came from.
 
 [[press the &quot;0&quot; button-&gt;go to floor 0]]
-[[press the &quot;-1&quot; button-&gt;go to floor -1]]</tw-passagedata><tw-passagedata pid="63" name="impatience" tags="" position="2827.6666666666665,3164" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/elevator.png&quot;&gt;}]
+[[press the &quot;-1&quot; button-&gt;go to floor -1]]</tw-passagedata><tw-passagedata pid="63" name="impatience" tags="" position="2827,3164" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/elevator.png&quot;&gt;}]
 You start getting impatient.
 You pace back and forth on the stone platform hovering above the empty city as you wait for the elevator.
 Just as you begin to get impatient over how slowly you are able to tap your foot, the elevator door opens with a ding.
@@ -527,23 +526,23 @@ You hastily enter the elevator and see two buttons dictating the floors you may 
 The top button has a large &quot;0&quot; written on it while the bottom one has a &quot;-1&quot;.
 
 [[press the &quot;0&quot; button-&gt;go to floor 0]]
-[[press the &quot;-1&quot; button-&gt;go to floor -1]]</tw-passagedata><tw-passagedata pid="64" name="walk down the hallway" tags="" position="2787.6666666666665,2692.333333333333" size="100,100">You start down the hallway.
+[[press the &quot;-1&quot; button-&gt;go to floor -1]]</tw-passagedata><tw-passagedata pid="64" name="walk down the hallway" tags="" position="2787,2692" size="100,100">You start down the hallway.
 Along the walls you can see large industrial text reading &quot;-0.001th floor&quot;
 Whoever came up with this floor numbering system is a psycho.
 You approach a metal door at the end of the hallway with a pushbar.
 
-[[push the door open-&gt;go to open the door]]</tw-passagedata><tw-passagedata pid="65" name="go to open the door" tags="" position="2801,2507.333333333333" size="100,100">You go to open the door when you feel a slight rumble.
+[[push the door open-&gt;go to open the door]]</tw-passagedata><tw-passagedata pid="65" name="go to open the door" tags="" position="2801,2507" size="100,100">You go to open the door when you feel a slight rumble.
 You turn to your right and notice the wall begin to crumble.
 Beyond the wall you see that some sort of singularity is absorbing a portion of the wall.
 It beckons you with a red &quot;EXIT&quot; sign orbiting around it.
 
 [[go through the door-&gt;the news room]]
-[[exit through the singularity-&gt;escape]]</tw-passagedata><tw-passagedata pid="66" name="the news room" tags="" position="2701,2352.333333333333" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/NewsRoom.png&quot;&gt;}]
+[[exit through the singularity-&gt;escape]]</tw-passagedata><tw-passagedata pid="66" name="the news room" tags="" position="2701,2352" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/NewsRoom.png&quot;&gt;}]
 You enter through the door and are met by an intense heat.
 Similar to the elevator platform, the floor is a glossy stone while the table in the center of the room is a much coarser, darker stone.
 Behind the table is a large, red electronic desplay with the text &quot;NEWS&quot; sprawled on it.
 
-[[Look around-&gt;look around the news room]]</tw-passagedata><tw-passagedata pid="67" name="escape" tags="" position="3114.333333333333,2353.9999999999995" size="100,100">You exit out the hole in the wall, getting sucked into the singularity.
+[[Look around-&gt;look around the news room]]</tw-passagedata><tw-passagedata pid="67" name="escape" tags="" position="3114,2353" size="100,100">You exit out the hole in the wall, getting sucked into the singularity.
 You suddenly feel weightless, floating in the void.
 
 (if: $boss1defeated and $boss2defeated)[
@@ -558,10 +557,10 @@ You suddenly feel weightless, floating in the void.
 (if: $boss1defeated is false and $boss2defeated is false)[
 	You have skipped most of the game.
 	I recommend going back and giving it another go.
-]</tw-passagedata><tw-passagedata pid="68" name="look around the news room" tags="" position="2684.333333333333,2205.6666666666665" size="100,100">You search around for any sign of life.
+]</tw-passagedata><tw-passagedata pid="68" name="look around the news room" tags="" position="2684,2205" size="100,100">You search around for any sign of life.
 As you approach the centeral table, you feel the heat getting hotter than ever before.
 
-[[check behind the table-&gt;clown intro]]</tw-passagedata><tw-passagedata pid="69" name="clown intro" tags="" position="2679.333333333333,2045.6666666666663" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
+[[check behind the table-&gt;clown intro]]</tw-passagedata><tw-passagedata pid="69" name="clown intro" tags="" position="2679,2045" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
 As you come up on the table a figure pops up from behind it.
 It&#39;s wearing a large orange wig, and a split red and blue suit.
 Despite having no face, the being has applied red, white, and blue facepaint, giving it the look of a clown.
@@ -578,7 +577,7 @@ The clown clasps its hands together, &quot;now then, I&#39;ll go first.&quot;
 [[begin-&gt;Clown Turn 1]]{
 (set: $clownstanding to 0)
 (set: $yourstanding to 0)
-(set: $secondchance to false)}</tw-passagedata><tw-passagedata pid="70" name="Clown Turn 1" tags="" position="2847.666666666666,1862.3333333333328" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
+(set: $secondchance to false)}</tw-passagedata><tw-passagedata pid="70" name="Clown Turn 1" tags="" position="2847,1862" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
 On the screen behind the clown, the &quot;NEWS&quot; text is replaced by three vertical bars.
 The one on the left side of the screen is labelled &quot;Your Audience Score&quot;.
 The one in the middle is labelled &quot;Life Cycle&quot;.
@@ -603,7 +602,7 @@ You also notice a large film camera in the middle of the room that wasn&#39;t th
 
 &quot;Alright, your turn&quot; the clown says.
 
-[[go up behind the table-&gt;Your Turn 1]]</tw-passagedata><tw-passagedata pid="71" name="Your Turn 1" tags="" position="3027.6666666666665,1848.9999999999993" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
+[[go up behind the table-&gt;Your Turn 1]]</tw-passagedata><tw-passagedata pid="71" name="Your Turn 1" tags="" position="3027,1848" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
 You get up to the news desk and feel a weight in your pockets.
 Reaching in, you find three scripts, each of which a legitimate news story.
 The first script contains information on new studies in the field of climate change.
@@ -616,21 +615,21 @@ The &quot;Life Cycle&quot; bar is currently 1/3 of the way full.
 
 [[read script 1-&gt;Turn 1 Script 1]]
 [[read script 2-&gt;Turn 1 Script 2]]
-[[read script 3-&gt;Turn 1 Script 3]]</tw-passagedata><tw-passagedata pid="72" name="Turn 1 Script 1" tags="" position="3230.9999999999995,1690.666666666666" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
+[[read script 3-&gt;Turn 1 Script 3]]</tw-passagedata><tw-passagedata pid="72" name="Turn 1 Script 1" tags="" position="3230,1690" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
 You read off of script 1. Clearly, you chose correct, as the &quot;Your Audience Score&quot; bar fills 1/3 of the way up.{
 (set: $yourstanding to $yourstanding + (1/3*100))}
 &quot;Alright, enough of that&quot; the clown says as he pushes you off the stand, placing him back in front of the camera.
 
-[[and back to you in the studio-&gt;Clown Turn 2]]</tw-passagedata><tw-passagedata pid="73" name="Turn 1 Script 2" tags="" position="3224.333333333333,1852.3333333333326" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
+[[and back to you in the studio-&gt;Clown Turn 2]]</tw-passagedata><tw-passagedata pid="73" name="Turn 1 Script 2" tags="" position="3224,1852" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
 You read off of script 2 and see the &quot;Your Audience Score&quot; bar rise 1/6 of the way up.{
 (set: $yourstanding to $yourstanding + (1/6*100))}
 &quot;Alright, enough of that&quot; the clown says as he pushes you off the stand, placing him back in front of the camera.
 
-[[and back to you in the studio-&gt;Clown Turn 2]]</tw-passagedata><tw-passagedata pid="74" name="Turn 1 Script 3" tags="" position="3224.333333333333,2033.9999999999993" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
+[[and back to you in the studio-&gt;Clown Turn 2]]</tw-passagedata><tw-passagedata pid="74" name="Turn 1 Script 3" tags="" position="3224,2033" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
 You read off of script 3, but I guess the audience didn&#39;t care much for medicare as you didn&#39;t gain any ground on the &quot;Your Audience Score&quot; bar.
 &quot;Alright, enough of that&quot; the clown says as he pushes you off the stand, placing him back in front of the camera.
 
-[[and back to you in the studio-&gt;Clown Turn 2]]</tw-passagedata><tw-passagedata pid="75" name="Clown Turn 2" tags="" position="3465.9999999999995,1858.9999999999993" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
+[[and back to you in the studio-&gt;Clown Turn 2]]</tw-passagedata><tw-passagedata pid="75" name="Clown Turn 2" tags="" position="3465,1858" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
 Before the clown begins to speak, the &quot;Life Cycle&quot; bar increases to a total of 2/3 of its max.{
 (set: $clown to (random: 1,3))}
 (if: $clown is 1)[
@@ -649,7 +648,7 @@ Before the clown begins to speak, the &quot;Life Cycle&quot; bar increases to a 
 
 &quot;Alright, your turn&quot; the clown says.
 
-[[go up behind the table-&gt;Your Turn 2]]</tw-passagedata><tw-passagedata pid="76" name="Your Turn 2" tags="" position="3671,1863.9999999999993" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
+[[go up behind the table-&gt;Your Turn 2]]</tw-passagedata><tw-passagedata pid="76" name="Your Turn 2" tags="" position="3671,1863" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
 Once again, you find yourself back at the stand.
 
 The &quot;My Audience Score&quot; bar is currently $clownstanding% full.
@@ -658,22 +657,22 @@ The &quot;Life Cycle&quot; bar is currently 2/3 of the way full.
 
 [[read script 1-&gt;Turn 2 Script 1]]
 [[read script 2-&gt;Turn 2 Script 2]]
-[[read script 3-&gt;Turn 2 Script 3]]</tw-passagedata><tw-passagedata pid="77" name="Turn 2 Script 1" tags="" position="3885.9999999999995,1693.9999999999993" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
+[[read script 3-&gt;Turn 2 Script 3]]</tw-passagedata><tw-passagedata pid="77" name="Turn 2 Script 1" tags="" position="3885,1693" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
 You read off of script 1, filling the the &quot;Your Audience Score&quot; up an extra 1/6 of its total height.{
 (set: $yourstanding to $yourstanding + (1/6*100))}
 &quot;Alright, enough of that&quot; the clown says as he pushes you off the stand, placing him back in front of the camera.
 
-[[and back to you in the studio-&gt;Clown Turn 3]]</tw-passagedata><tw-passagedata pid="78" name="Turn 2 Script 2" tags="" position="3876,1873.9999999999993" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
+[[and back to you in the studio-&gt;Clown Turn 3]]</tw-passagedata><tw-passagedata pid="78" name="Turn 2 Script 2" tags="" position="3876,1873" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
 You read off of script 2 and see the &quot;Your Audience Score&quot; bar rise 1/3 of the way up.{
 (set: $yourstanding to $yourstanding + (1/3*100))}
 &quot;Alright, enough of that&quot; the clown says as he pushes you off the stand, placing him back in front of the camera.
 
-[[and back to you in the studio-&gt;Clown Turn 3]]</tw-passagedata><tw-passagedata pid="79" name="Turn 2 Script 3" tags="" position="3876,2050.666666666666" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
+[[and back to you in the studio-&gt;Clown Turn 3]]</tw-passagedata><tw-passagedata pid="79" name="Turn 2 Script 3" tags="" position="3876,2050" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
 You read off of script 2 and see the &quot;Your Audience Score&quot; bar rise 1/6 of the way up.{
 (set: $yourstanding to $yourstanding + (1/6*100))}
 &quot;Alright, enough of that&quot; the clown says as he pushes you off the stand, placing him back in front of the camera.
 
-[[and back to you in the studio-&gt;Clown Turn 3]]</tw-passagedata><tw-passagedata pid="80" name="Clown Turn 3" tags="" position="4092.6666666666665,1888.9999999999993" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
+[[and back to you in the studio-&gt;Clown Turn 3]]</tw-passagedata><tw-passagedata pid="80" name="Clown Turn 3" tags="" position="4092,1888" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
 Before the clown begins to speak, the &quot;Life Cycle&quot; bar increases to full.{
 (set: $clown to (random: 1,3))}
 (if: $clown is 1)[
@@ -691,7 +690,7 @@ Before the clown begins to speak, the &quot;Life Cycle&quot; bar increases to fu
 
 &quot;Alright, your turn&quot; the clown says.
 
-[[go up behind the table-&gt;Your Turn 3]]</tw-passagedata><tw-passagedata pid="81" name="Your Turn 3" tags="" position="4282.666666666666,1897.3333333333326" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
+[[go up behind the table-&gt;Your Turn 3]]</tw-passagedata><tw-passagedata pid="81" name="Your Turn 3" tags="" position="4282,1897" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
 Once again, you find yourself back at the stand.
 
 The &quot;My Audience Score&quot; bar is currently $clownstanding% full.
@@ -700,24 +699,24 @@ The &quot;Life Cycle&quot; bar is now completely full.
 
 [[read script 1-&gt;Turn 3 Script 1]]
 [[read script 2-&gt;Turn 3 Script 2]]
-[[read script 3-&gt;Turn 3 Script 3]]</tw-passagedata><tw-passagedata pid="82" name="Turn 3 Script 1" tags="" position="4462.666666666666,1703.999999999999" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
+[[read script 3-&gt;Turn 3 Script 3]]</tw-passagedata><tw-passagedata pid="82" name="Turn 3 Script 1" tags="" position="4462,1703" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
 You read off of script one, however, the audience didn&#39;t seem to care much for climate change as the &quot;Your Audience Score&quot; bar didn&#39;t increase at all.
 &quot;Alright, enough of that&quot; the clown says as he pushes you off the stand.
 &quot;now, let&#39;s see the final rankings.&quot;
 
-[[it&#39;s time to ddddduel-&gt;Duel]]</tw-passagedata><tw-passagedata pid="83" name="Turn 3 Script 2" tags="" position="4461,1898.9999999999993" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
+[[it&#39;s time to ddddduel-&gt;Duel]]</tw-passagedata><tw-passagedata pid="83" name="Turn 3 Script 2" tags="" position="4461,1898" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
 You read off of script 2, filling the the &quot;Your Audience Score&quot; up an extra 1/6 of its total height.{
 (set: $yourstanding to $yourstanding + (1/6*100))}
 &quot;Alright, enough of that&quot; the clown says as he pushes you off the stand.
 &quot;now, let&#39;s see the final rankings.&quot;
 
-[[it&#39;s time to ddddduel-&gt;Duel]]</tw-passagedata><tw-passagedata pid="84" name="Turn 3 Script 3" tags="" position="4462.666666666666,2078.999999999999" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
+[[it&#39;s time to ddddduel-&gt;Duel]]</tw-passagedata><tw-passagedata pid="84" name="Turn 3 Script 3" tags="" position="4462,2078" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
 You read off of script 2 and see the &quot;Your Audience Score&quot; bar rise 1/3 of the way up.{
 (set: $yourstanding to $yourstanding + (1/3*100))}
 &quot;Alright, enough of that&quot; the clown says as he pushes you off the stand.
 &quot;now, let&#39;s see the final rankings.&quot;
 
-[[it&#39;s time to ddddduel-&gt;Duel]]</tw-passagedata><tw-passagedata pid="85" name="Duel" tags="" position="4687.666666666666,1900.6666666666658" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
+[[it&#39;s time to ddddduel-&gt;Duel]]</tw-passagedata><tw-passagedata pid="85" name="Duel" tags="" position="4687,1900" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
 (if: $yourstanding&gt;$clownstanding)[
 	Both bars are on full display on the screen behind you.
 	You won.
@@ -746,7 +745,7 @@ You read off of script 2 and see the &quot;Your Audience Score&quot; bar rise 1/
 	
 	[[continue-&gt;Clown Phase 2]]
 
-]</tw-passagedata><tw-passagedata pid="86" name="Clown Phase 2" tags="" position="4940.999999999999,1918.9999999999993" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clownTransform.gif&quot;&gt;}]
+]</tw-passagedata><tw-passagedata pid="86" name="Clown Phase 2" tags="" position="4940,1918" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clownTransform.gif&quot;&gt;}]
 &quot;Time to get serious&quot; the clown says.
 Purple and black accents begin to seep into its red and blue aspects.
 Three slits form on its face, turning into the clown&#39;s eyes and mouth.
@@ -759,7 +758,7 @@ The left and right bars return to zero, but the center bar does not.
 
 [[the clown walks up to the desk-&gt;Phase 2 Clown Turn 1]]{
 (set: $clownstanding to 0)
-(set: $yourstanding to 0)}</tw-passagedata><tw-passagedata pid="87" name="do over" tags="" position="3792.666666666666,2280.666666666666" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
+(set: $yourstanding to 0)}</tw-passagedata><tw-passagedata pid="87" name="do over" tags="" position="3792,2280" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
 All bars drop back down to zero except for the &quot;Life Cycle&quot; bar which remains at 1/3 full.{
 (set: $clownstanding to 0)
 (set: $yourstanding to 0)
@@ -779,14 +778,14 @@ All bars drop back down to zero except for the &quot;Life Cycle&quot; bar which 
 
 &quot;Alright, your turn&quot; the clown says.
 
-[[go up behind the table-&gt;Your Turn 1 do over]]</tw-passagedata><tw-passagedata pid="88" name="Your Turn 1 do over" tags="" position="3472.666666666666,2193.999999999999" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
+[[go up behind the table-&gt;Your Turn 1 do over]]</tw-passagedata><tw-passagedata pid="88" name="Your Turn 1 do over" tags="" position="3472,2193" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
 The &quot;My Audience Score&quot; bar is currently $clownstanding% full.
 The &quot;Your Audience Score&quot; bar is currently $yourstanding% full.
 The &quot;Life Cycle&quot; bar is currently 1/3 of the way full.
 
 [[read script 1-&gt;Turn 1 Script 1]]
 [[read script 2-&gt;Turn 1 Script 2]]
-[[read script 3-&gt;Turn 1 Script 3]]</tw-passagedata><tw-passagedata pid="89" name="Phase 2 Clown Turn 1" tags="" position="5177.666666666665,1917.3333333333326" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown2.png&quot;&gt;}]
+[[read script 3-&gt;Turn 1 Script 3]]</tw-passagedata><tw-passagedata pid="89" name="Phase 2 Clown Turn 1" tags="" position="5177,1917" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown2.png&quot;&gt;}]
 (set: $clown to (either: 1,1,2,3))
 (if: $clown is 1)[
 	The clown really went all out on this one. It went on a long, yet compelling, opinion piece backing up all sorts of conspiracy theories regarding climate change.
@@ -803,7 +802,7 @@ The &quot;Life Cycle&quot; bar is currently 1/3 of the way full.
 
 &quot;Alright, go gettim tiger&quot; the clown says.
 
-[[go up behind the table-&gt;Phase 2 Your Turn 1]]</tw-passagedata><tw-passagedata pid="90" name="Phase 2 Your Turn 1" tags="" position="5390.999999999998,1927.3333333333326" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown2.png&quot;&gt;}]
+[[go up behind the table-&gt;Phase 2 Your Turn 1]]</tw-passagedata><tw-passagedata pid="90" name="Phase 2 Your Turn 1" tags="" position="5390,1927" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown2.png&quot;&gt;}]
 Your turn. Between this round and the last, however, you appear to have mixed up your scripts.
 Now, script 1 is about avocado toast, script 2 is about medicare, and script 3 is about climate change.
 
@@ -813,21 +812,21 @@ The &quot;Life Cycle&quot; bar is currently 1/3 of the way full.
 
 [[read script 1-&gt;Phase 2 Turn 1 Script 1]]
 [[read script 2-&gt;Phase 2 Turn 1 Script 2]]
-[[read script 3-&gt;Phase 2 Turn 1 Script 3]]</tw-passagedata><tw-passagedata pid="91" name="Phase 2 Turn 1 Script 1" tags="" position="5609.333333333331,1795.6666666666658" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown.png&quot;&gt;}]
+[[read script 3-&gt;Phase 2 Turn 1 Script 3]]</tw-passagedata><tw-passagedata pid="91" name="Phase 2 Turn 1 Script 1" tags="" position="5609,1793.3333333333333" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown2.png&quot;&gt;}]
 You read off of script 1. Clearly, you chose correct, as the &quot;Your Audience Score&quot; bar fills 1/3 of the way up.{
 (set: $yourstanding to $yourstanding + (1/3*100))}
 &quot;My turn&quot; the clown says as you conclude.
 
-[[and back to you in the studio-&gt;Phase 2 Clown Turn 2]]</tw-passagedata><tw-passagedata pid="92" name="Phase 2 Turn 1 Script 2" tags="" position="5597.666666666665,1947.3333333333326" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown2.png&quot;&gt;}]
+[[and back to you in the studio-&gt;Phase 2 Clown Turn 2]]</tw-passagedata><tw-passagedata pid="92" name="Phase 2 Turn 1 Script 2" tags="" position="5597,1947" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown2.png&quot;&gt;}]
 You read off of script 2 and see the &quot;Your Audience Score&quot; bar rise 1/6 of the way up.{
 (set: $yourstanding to $yourstanding + (1/6*100))}
 &quot;My turn&quot; the clown says as you conclude.
 
-[[and back to you in the studio-&gt;Phase 2 Clown Turn 2]]</tw-passagedata><tw-passagedata pid="93" name="Phase 2 Turn 1 Script 3" tags="" position="5597.666666666665,2100.666666666666" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown2.png&quot;&gt;}]
+[[and back to you in the studio-&gt;Phase 2 Clown Turn 2]]</tw-passagedata><tw-passagedata pid="93" name="Phase 2 Turn 1 Script 3" tags="" position="5597,2100" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown2.png&quot;&gt;}]
 You read off of script 3, but I guess the audience didn&#39;t care much for medicare as you didn&#39;t gain any ground on the &quot;Your Audience Score&quot; bar.
 &quot;My turn&quot; the clown says as you conclude.
 
-[[and back to you in the studio-&gt;Phase 2 Clown Turn 2]]</tw-passagedata><tw-passagedata pid="94" name="Phase 2 Clown Turn 2" tags="" position="5844.333333333331,1973.999999999999" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown2.png&quot;&gt;}]{
+[[and back to you in the studio-&gt;Phase 2 Clown Turn 2]]</tw-passagedata><tw-passagedata pid="94" name="Phase 2 Clown Turn 2" tags="" position="5844,1973" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown2.png&quot;&gt;}]{
 (set: $clown to (either: 1,1,2,3))}
 As the clown walks up to the desk, the &quot;Life Cycle&quot; bar flies up to full.
 (if: $clown is 1)[
@@ -845,7 +844,7 @@ As the clown walks up to the desk, the &quot;Life Cycle&quot; bar flies up to fu
 
 &quot;Alright, go gettim tiger&quot; the clown says.
 
-[[go up behind the table-&gt;Phase 2 Your Turn 2]]</tw-passagedata><tw-passagedata pid="95" name="Phase 2 Your Turn 2" tags="" position="6060.999999999998,1972.3333333333328" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown2.png&quot;&gt;}]
+[[go up behind the table-&gt;Phase 2 Your Turn 2]]</tw-passagedata><tw-passagedata pid="95" name="Phase 2 Your Turn 2" tags="" position="6060,1972" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown2.png&quot;&gt;}]
 Your turn.
 
 The &quot;My Audience Score&quot; bar is currently $clownstanding% full.
@@ -854,21 +853,21 @@ The &quot;Life Cycle&quot; bar is completely full.
 
 [[read script 1-&gt;Phase 2 Turn 2 Script 1]]
 [[read script 2-&gt;Phase 2 Turn 2 Script 2]]
-[[read script 3-&gt;Phase 2 Turn 2 Script 3]]</tw-passagedata><tw-passagedata pid="96" name="Phase 2 Turn 2 Script 1" tags="" position="6292.666666666665,1832.333333333333" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown2.png&quot;&gt;}]
+[[read script 3-&gt;Phase 2 Turn 2 Script 3]]</tw-passagedata><tw-passagedata pid="96" name="Phase 2 Turn 2 Script 1" tags="" position="6292,1832" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown2.png&quot;&gt;}]
 You read off of script one, however, the audience didn&#39;t seem to care much for climate change as the &quot;Your Audience Score&quot; bar didn&#39;t increase at all.
 &quot;My turn&quot; the clown says as you conclude.
 
-[[and back to you in the studio-&gt;Phase 2 Clown Turn 3]]</tw-passagedata><tw-passagedata pid="97" name="Phase 2 Turn 2 Script 2" tags="" position="6287.666666666665,1983.9999999999998" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown2.png&quot;&gt;}]
+[[and back to you in the studio-&gt;Phase 2 Clown Turn 3]]</tw-passagedata><tw-passagedata pid="97" name="Phase 2 Turn 2 Script 2" tags="" position="6287,1983" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown2.png&quot;&gt;}]
 You read off of script 2, filling the the &quot;Your Audience Score&quot; up an extra 1/6 of its total height.{
 (set: $yourstanding to $yourstanding + (1/6*100))}
 &quot;My turn&quot; the clown says as you conclude.
 
-[[and back to you in the studio-&gt;Phase 2 Clown Turn 3]]</tw-passagedata><tw-passagedata pid="98" name="Phase 2 Turn 2 Script 3" tags="" position="6287.666666666665,2142.333333333333" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown2.png&quot;&gt;}]
+[[and back to you in the studio-&gt;Phase 2 Clown Turn 3]]</tw-passagedata><tw-passagedata pid="98" name="Phase 2 Turn 2 Script 3" tags="" position="6287,2142" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown2.png&quot;&gt;}]
 You read off of script 2 and see the &quot;Your Audience Score&quot; bar rise 1/3 of the way up.{
 (set: $yourstanding to $yourstanding + (1/3*100))}
 &quot;My turn&quot; the clown says as you conclude.
 
-[[and back to you in the studio-&gt;Phase 2 Clown Turn 3]]</tw-passagedata><tw-passagedata pid="99" name="Phase 2 Clown Turn 3" tags="" position="6534.333333333331,1993.9999999999995" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown2.png&quot;&gt;}]{
+[[and back to you in the studio-&gt;Phase 2 Clown Turn 3]]</tw-passagedata><tw-passagedata pid="99" name="Phase 2 Clown Turn 3" tags="" position="6534,1993" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown2.png&quot;&gt;}]{
 (set: $clown to (either: 1,1,2,3))}
 As the clown walks up to the desk, the &quot;Life Cycle&quot; bar falls back down to 2/3 full.
 (if: $clown is 1)[
@@ -886,7 +885,7 @@ As the clown walks up to the desk, the &quot;Life Cycle&quot; bar falls back dow
 ]
 &quot;Last round. You better hope you beat me&quot; the clown says.
 
-[[go up behind the table-&gt;Phase 2 Your Turn 3]]</tw-passagedata><tw-passagedata pid="100" name="Phase 2 Your Turn 3" tags="" position="6777.666666666664,1997.3333333333328" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown2.png&quot;&gt;}]
+[[go up behind the table-&gt;Phase 2 Your Turn 3]]</tw-passagedata><tw-passagedata pid="100" name="Phase 2 Your Turn 3" tags="" position="6777,1997" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown2.png&quot;&gt;}]
 Your turn.
 
 The &quot;My Audience Score&quot; bar is currently $clownstanding% full.
@@ -895,7 +894,7 @@ The &quot;Life Cycle&quot; bar is currently 2/3 full.
 
 [[read script 1-&gt;Phase 2 Turn 3 Script 1]]
 [[read script 2-&gt;Phase 2 Turn 3 Script 2]]
-[[read script 3-&gt;Phase 2 Turn 3 Script 3]]</tw-passagedata><tw-passagedata pid="101" name="Phase 2 Turn 3 Script 1" tags="" position="6989.333333333331,1852.333333333333" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown2.png&quot;&gt;}]
+[[read script 3-&gt;Phase 2 Turn 3 Script 3]]</tw-passagedata><tw-passagedata pid="101" name="Phase 2 Turn 3 Script 1" tags="" position="6989,1852" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown2.png&quot;&gt;}]
 You read off of script 1, filling the the &quot;Your Audience Score&quot; up an extra 1/6 of its total height.{
 (set: $yourstanding to $yourstanding + (1/6*100))}
 &quot;ALRIGHT FOLKS!&quot; yells the clown to the applause of the absent crowd.
@@ -903,21 +902,21 @@ You read off of script 1, filling the the &quot;Your Audience Score&quot; up an 
 &quot;FOR THE FINAL COUNT&quot;
 
 
-[[LET&#39;S SEE WHO WON-&gt;boss 3 end]]</tw-passagedata><tw-passagedata pid="102" name="Phase 2 Turn 3 Script 2" tags="" position="6990.999999999997,1990.6666666666663" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown2.png&quot;&gt;}]
+[[LET&#39;S SEE WHO WON-&gt;boss 3 end]]</tw-passagedata><tw-passagedata pid="102" name="Phase 2 Turn 3 Script 2" tags="" position="6990,1990" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown2.png&quot;&gt;}]
 You read off of script 2 and see the &quot;Your Audience Score&quot; bar rise 1/3 of the way up.{
 (set: $yourstanding to $yourstanding + (1/3*100))}
 &quot;ALRIGHT FOLKS!&quot; yells the clown to the applause of the absent crowd.
 &quot;IT IS TIME...&quot;
 &quot;FOR THE FINAL COUNT&quot;
 
-[[LET&#39;S SEE WHO WON-&gt;boss 3 end]]</tw-passagedata><tw-passagedata pid="103" name="Phase 2 Turn 3 Script 3" tags="" position="6995.999999999997,2157.333333333333" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown2.png&quot;&gt;}]
+[[LET&#39;S SEE WHO WON-&gt;boss 3 end]]</tw-passagedata><tw-passagedata pid="103" name="Phase 2 Turn 3 Script 3" tags="" position="6995,2157" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown2.png&quot;&gt;}]
 You read off of script 2 and see the &quot;Your Audience Score&quot; bar rise 1/6 of the way up.{
 (set: $yourstanding to $yourstanding + (1/6*100))}
 &quot;ALRIGHT FOLKS!&quot; yells the clown to the applause of the absent crowd.
 &quot;IT IS TIME...&quot;
 &quot;FOR THE FINAL COUNT&quot;
 
-[[LET&#39;S SEE WHO WON-&gt;boss 3 end]]</tw-passagedata><tw-passagedata pid="104" name="boss 3 end" tags="" position="7250.999999999997,2013.9999999999995" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown2.png&quot;&gt;}]
+[[LET&#39;S SEE WHO WON-&gt;boss 3 end]]</tw-passagedata><tw-passagedata pid="104" name="boss 3 end" tags="" position="7250,2013" size="100,100">(align:&quot;=&gt;&lt;=&quot;)+(box:&quot;X&quot;)[{&lt;img src=&quot;https://nacleenz.github.io/DMST103TwineProject/images/clown2.png&quot;&gt;}]
 (if: $yourstanding&gt;=$clownstanding)[{
 	(set: $boss3defeated to true)}
 	The applause ceaces as the bars appear on the board.
@@ -929,7 +928,7 @@ You read off of script 2 and see the &quot;Your Audience Score&quot; bar rise 1/
 	And with that the clown evaporates into a mist, swirling up into stone helix that has formed from the roof of the newsroom.
 	
 	[[head backstage-&gt;backstage]]
-](elseif $yourstanding&lt;$clownstanding:)[
+](elseif: $yourstanding&lt;$clownstanding)[
 	&quot;Well well well. Looks like I was too much for you to handle&quot; says the clown.
 	It leans over to you.
 	&quot;I told you I was going to go all out, didn&#39;t I?&quot;
@@ -937,20 +936,20 @@ You read off of script 2 and see the &quot;Your Audience Score&quot; bar rise 1/
 	The clown begins to cackle as you feel yourself liquifying, then evaporating.
 	You feel your conciousness float up into the night sky amongst the helix of rocks that had formed of the news room&#39;s roof.
 	Then, suddenly, [[you fall into darkness-&gt;Start]].
-]</tw-passagedata><tw-passagedata pid="105" name="backstage" tags="" position="7659.33333333333,2005.666666666666" size="100,100">You head backstage as the clown instructed and are met by a gold plated door with a lock on it.
+]</tw-passagedata><tw-passagedata pid="105" name="backstage" tags="" position="7659,2005" size="100,100">You head backstage as the clown instructed and are met by a gold plated door with a lock on it.
 
 [[place the key into the lock-&gt;Use key 3]]
-[[try the door without the key-&gt;Don&#39;t use key 3]]</tw-passagedata><tw-passagedata pid="106" name="Use key 3" tags="" position="7777.666666666663,1838.9999999999993" size="100,100">(set: $havekey3 to false)
+[[try the door without the key-&gt;Don&#39;t use key 3]]</tw-passagedata><tw-passagedata pid="106" name="Use key 3" tags="" position="7777,1838" size="100,100">(set: $havekey3 to false)
 You put the key into the keyhole and turn, the door opens without much give, yet the key is now stuck.
 On the other side of the door, you see a void, as dark as the one you started in.
 
-[[take your leave-&gt;leave]]</tw-passagedata><tw-passagedata pid="107" name="Don&#39;t use key 3" tags="" position="7469.33333333333,1830.666666666666" size="100,100">(set: $havekey3 to true)
+[[take your leave-&gt;leave]]</tw-passagedata><tw-passagedata pid="107" name="Don&#39;t use key 3" tags="" position="7469,1830" size="100,100">(set: $havekey3 to true)
 You try the door and it opens without much give.
 On the other side, you see a void, as dark as the one you started in.
 
-[[take your leave-&gt;leave]]</tw-passagedata><tw-passagedata pid="108" name="leave" tags="" position="7650.999999999997,1630.666666666666" size="100,100">As you pass through the door, the darkness swallows you as you feel yourself become weightless, floating in the void.
+[[take your leave-&gt;leave]]</tw-passagedata><tw-passagedata pid="108" name="leave" tags="" position="7650,1630" size="100,100">As you pass through the door, the darkness swallows you as you feel yourself become weightless, floating in the void.
 
-(if: $havekey1 and $havekey2 and $havekey3)[
+(if: $havekey1 is true and $havekey2 is true and $havekey3 is true)[
 	Floating in the void in front of you is an obsidion box with three keyholes.
 	
 	[[place the keys into the keyholes-&gt;open the box]]
@@ -964,7 +963,7 @@ On the other side, you see a void, as dark as the one you started in.
 ]
 (if: $boss1defeated is false and $boss2defeated is false)[
 	You missed two encounters! I recommend going back and giving it another go.
-]</tw-passagedata><tw-passagedata pid="109" name="open the box" tags="" position="7645.999999999997,1438.999999999999" size="100,100">You place the keys into the keyholes and open the box.
+]</tw-passagedata><tw-passagedata pid="109" name="open the box" tags="" position="7650,1443" size="100,100">You place the keys into the keyholes and open the box.
 Inside you find all of your memories.
 
 Happy ones.
@@ -984,7 +983,7 @@ Defy the odds.
 
 We&#39;ll make it yet :)
 
-[[END-&gt;Thanks]]</tw-passagedata><tw-passagedata pid="110" name="Thanks" tags="" position="7629.33333333333,1257.3333333333323" size="100,100">Thanks for playing my game. There&#39;s so much going on in the world all the time, it can get a bit overwhelming. Thus, I wanted to make a fun/challenging experience with some some light-hearted real life themes. 
+[[END-&gt;Thanks]]</tw-passagedata><tw-passagedata pid="110" name="Thanks" tags="" position="7647.333333333333,1258.6666666666667" size="100,100">Thanks for playing my game. There&#39;s so much going on in the world all the time, it can get a bit overwhelming. Thus, I wanted to make a fun/challenging experience with some some light-hearted real life themes. 
 
 One of the most rewarding parts of this project has been figuring out ways to make complex and intricate experiences under the limitations of Twine and my initial knowledge of the software.
 
